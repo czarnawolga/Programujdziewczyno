@@ -16,6 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
       var textArea = this.previousElementSibling;
       textArea.style.display = 'block';
       this.innerHTML = 'MNIEJ <span class="glyphicon glyphicon-chevron-up"></span>';
+	buttons[0].addEventListener('click', function() {
+      if (textArea.style.display === 'none' || textArea.style.display === '') { textArea.style.display = 'block'; this.innerHTML = 'MNIEJ <span class="glyphicon glyphicon-chevron-up"></span>';
+      } else {
+        textArea.style.display = 'none';
+        this.innerHTML = 'WIĘCEJ <span class="glyphicon glyphicon-chevron-down"></span>';
+      }
+
+    });
     });
 
 });
